@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Books</title>
+    <link rel="stylesheet" href="books.css">
 </head>
 
 <body>
-<form method="GET" action="./buses">
-    <input type="text" name="book ID">
-    <input type="submit" title="Find">
-</form>
+<div class="d1">
+    <form action="./buses" method="GET">
+        <input type="text" name="book ID" placeholder="Искать здесь...">
+        <button type="submit" title="Find">Поиск</button>
+    </form>
+</div>
 <br>
-<table class="w-100">
+<table class="w-100" cellspacing="0">
     <tr>
         <th th:text="#{book.bookID}"></th>
         <th th:text="#{book.UDC}"></th>
@@ -28,8 +31,10 @@
             <td th:text="${row.creationYear}"></td>
             <td th:text="${row.publisher}"></td>
             <td th:text="${row.pageAmount}"></td>
+            <td></td>
         </tr>
     </th:block>
 </table>
+
 </body>
 </html>
