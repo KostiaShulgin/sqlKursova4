@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Locations</title>
+</head>
+
+<body>
+<table class="w-100">
+    <tr>
+        <th th:text="#{location.locationID}"></th>
+        <th th:text="#{location.floor}"></th>
+        <th th:text="#{location.section}"></th>
+        <th th:text="#{location.shelf}"></th>
+    </tr>
+    <th:block th:each="row : ${result2}">
+        <tr>
+            <td th:text="${row.locationID}">index</td>
+            <td th:text="${row.floor}"></td>
+            <td th:text="${row.section}"></td>
+            <td th:text="${row.shelf}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

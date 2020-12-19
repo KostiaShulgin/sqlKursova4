@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+
+<body>
+<form method="GET" action="./buses">
+    <input type="text" name="book ID">
+    <input type="submit" title="Find">
+</form>
+<br>
+<table class="w-100">
+    <tr>
+        <th th:text="#{book.bookID}"></th>
+        <th th:text="#{book.UDC}"></th>
+        <th th:text="#{book.authorID}"></th>
+        <th th:text="#{book.creationYear}"></th>
+        <th th:text="#{book.publisher}"></th>
+        <th th:text="#{book.pageAmount}"></th>
+    </tr>
+    <th:block th:each="row : ${result1}">
+        <tr>
+            <td th:text="${row.bookID}">index</td>
+            <td th:text="${row.UDC}"></td>
+            <td th:text="${row.authorID}"></td>
+            <td th:text="${row.creationYear}"></td>
+            <td th:text="${row.publisher}"></td>
+            <td th:text="${row.pageAmount}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

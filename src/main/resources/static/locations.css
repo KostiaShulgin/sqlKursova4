@@ -1,0 +1,37 @@
+body{
+    background-image: url("b54399b827ad263bd39bf4aac1b72042.jpg");
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 53px #426ff1 inset, 0 0 0 0 #426ff1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+    letter-spacing: 2px;
+    color: white;
+    transition: .15s ease-in-out;
+}
+a:hover {
+    box-shadow: 0 0 10px 0 #426ff1 inset, 0 0 10px 4px #426ff1;
+    color: #426ff1;
+}
+#btn1{
+    padding: 65px 210px;
+}
+#btn2{
+    padding: 65px 157px;
+}
+div {
+    display: block;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 28%;
+}
