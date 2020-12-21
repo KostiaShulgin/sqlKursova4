@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form action="#" th:action="@{/saveBook}"  th:object = "${book}" method="POST">
+        <input type="text" th:field = "*{bookID}" placeholder="Book ID">
+        <input type="text" th:field = "*{UDC}" placeholder="UDC Number">
+        <input type="text" th:field = "*{authorID}" placeholder="Author ID">
+        <input type="text" th:field = "*{creationYear}" placeholder="Year of creation">
+        <input type="text" th:field = "*{publisher}" placeholder="Publisher">
+        <input type="text" th:field = "*{pageAmount}" placeholder="Amount of pages">
+
+        <button type="submit"> Save book</button>
+    </form>
+</body>
+</html>

@@ -14,9 +14,9 @@ import kursova.sqlKursova1.service.LocationService;
 public class LocationController {
     private LocationService locationService;
 
-    @GetMapping("locations")
-    public String list(Model model) {
-        model.addAttribute("result2", locationService.getLocations());
-        return "locations";
+    @GetMapping("reader")
+    public String list(/*Model model*/) {
+//        model.addAttribute("result2", locationService.getLocations());
+        return "reader";
     }
 }

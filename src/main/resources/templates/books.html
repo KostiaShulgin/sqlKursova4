@@ -5,16 +5,18 @@
     <title>Books</title>
     <link rel="stylesheet" href="books.css">
 </head>
-
 <body>
 <div class="d1">
-    <form action="./buses" method="GET">
+    <form action="./books" method="GET">
         <input type="text" name="book ID" placeholder="Искать здесь...">
         <button type="submit" title="Find">Поиск</button>
+        <br>
+        <a th:href="@{/showNewBookForm}">Add</a>
     </form>
+
 </div>
 <br>
-<table class="w-100" cellspacing="0">
+<table cellspacing="0">
     <tr>
         <th th:text="#{book.bookID}"></th>
         <th th:text="#{book.UDC}"></th>
@@ -22,16 +24,18 @@
         <th th:text="#{book.creationYear}"></th>
         <th th:text="#{book.publisher}"></th>
         <th th:text="#{book.pageAmount}"></th>
+        <th colspan="2">Actions</th>
     </tr>
     <th:block th:each="row : ${result1}">
-        <tr>
-            <td th:text="${row.bookID}">index</td>
-            <td th:text="${row.UDC}"></td>
-            <td th:text="${row.authorID}"></td>
-            <td th:text="${row.creationYear}"></td>
-            <td th:text="${row.publisher}"></td>
-            <td th:text="${row.pageAmount}"></td>
-            <td></td>
+        <tr onclick="">
+            <td th:text="${row.bookID}" class="data">index</td>
+            <td th:text="${row.UDC}"class="data"></td>
+            <td th:text="${row.authorID}"class="data"></td>
+            <td th:text="${row.creationYear}"class="data"></td>
+            <td th:text="${row.publisher}"class="data"></td>
+            <td th:text="${row.pageAmount}"class="data"></td>
+            <td> <a th:href="@{/updateBookForm/{id}(id=${row.bookID})}" class="data">Update</a></td>
+            <td> <a th:href="@{/deleteBook/{id}(id=${row.bookID})}"class="data">Delete</a></td>
         </tr>
     </th:block>
 </table>

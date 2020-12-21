@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form action="#" th:action="@{/saveBook}"  th:object = "${book}" method="POST" >
+<!--    class="form-control mb-4 col-4-->
+<!--        <input type="hidden" th:field="*{id}"/>-->
+
+        <input type="text" th:field = "*{bookID}" placeholder="Book ID" class="formin">
+        <input type="text" th:field = "*{UDC}" placeholder="UDC Number" class="formin">
+        <input type="text" th:field = "*{authorID}" placeholder="Author ID" class="formin">
+        <input type="text" th:field = "*{creationYear}" placeholder="Year of creation" class="formin">
+        <input type="text" th:field = "*{publisher}" placeholder="Publisher" class="formin">
+        <input type="text" th:field = "*{pageAmount}" placeholder="Amount of pages" class="formin">
+
+        <button type="submit" > Update book</button>
+<!--        class="btn btn-info col-2"-->
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    background-image: url("rey-seven-nm-mZ4Cs2I-unsplash_397351.jpg");
+}
+form{
+    margin-top: 25%;
+    margin-left: 9%;
+}
+input{
+    background-color: #F9F0DA;
+    border-radius: 5px;
+    padding: 7px;
+    /*#7BA7AB*/
+}
+button{
+    background-color: #7BA7AB;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+}
+.formin input{
+    background:red;
+}
